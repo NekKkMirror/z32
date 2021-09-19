@@ -42,6 +42,8 @@ if (inputItem.value  === '') {
 
 btnCreate.onclick = function(event) {
 
+  event.preventDefault()
+
 if (inputItem.value > 22222) {
   error.children[0].textContent = `Введите цифру меньше 22 222`
   error.style.opacity = 1
@@ -55,7 +57,6 @@ if (inputItem.value > 22222) {
     error.style.transform = `translateY(-20px)`
   }, 3000)
 
-  return false
 }
 
 const reg = /\D+/ig
